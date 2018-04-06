@@ -1,0 +1,39 @@
+/*===========================================
+========= Loading Normalize ==========
+=============================================*/
+@import '~normalize-scss/sass/normalize';
+@include normalize();
+
+/*===========================================
+===== Loading Custom Normalize =====
+=============================================*/
+
+@import 'normalize';
+
+
+
+/*===========================================
+===== Loading Custom Setup of Variables =====
+=============================================*/
+@import 'vars/color';
+@import 'vars/breakpoints';
+@import 'vars/spaces';
+@import 'vars/typography';
+@import 'vars/navbar';
+@import 'vars/body';
+
+/*===========================================
+===== Loading Custom Setup of Mixins =====
+=============================================*/
+@import 'mixins/flex';
+@import 'mixins/breakpoints';
+
+// loading blocks
+@import 'blocks/body';
+@import 'blocks/card';
+@import 'blocks/modal';
+
+// loading elements
+@import 'elements/navbar',
+        'elements/icon',
+        'elements/typography';

@@ -1,0 +1,20 @@
+h1 {
+  font-size: $font-size-large;
+  color: $color-dark-marvel;
+  margin: 0;
+  padding: 0;
+}
+h2, h3, h4 {
+  margin: 0;
+  padding: 0;
+}
+h2 {
+  font-size: $font-size-small;
+  font-weight: 600;
+}
+
+h3 {
+  margin: 0 0 2rem;
+  font-size: $font-size-default;
+  font-weight: 400;
+}

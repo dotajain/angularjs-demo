@@ -1,0 +1,50 @@
+.modal {
+  position: fixed;
+  overflow: hidden;
+  background-color: rgba(0,0,0, 0.2);
+  z-index: 999;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  padding: 40px 20px;
+  &-body {
+    background-color: $color-white;
+    max-width: 400px;
+    border-radius: 3px;
+    padding: 20px;
+    margin: 0 auto;
+    border: 1px solid #C0CCDA;
+    font-size: .8rem;
+    position: relative;
+    h4 {
+      color: $color-marvel;
+      margin-bottom: 10px;
+      font-size: 1.1rem;
+    }
+    p {
+      margin: 0 0 8px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  &-close {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 1.4rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-family: Montserrat,Helvetica,Arial,sans-serif;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    background: #1FB6FF;
+    vertical-align: top;
+    padding-bottom: 3px;
+  }
+}
