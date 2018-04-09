@@ -3,4 +3,4 @@
  * directly included in vendor.bundle.js file.
  */
 
-import 'angular-ui-router';
+import '@uirouter/angularjs';

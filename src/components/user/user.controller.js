@@ -4,18 +4,16 @@ export default class UserController {
 		this.userService = userService;
 		this.user = null;
 	}
-
+	// initialize users
 	$onInit = () => {
 		this.userService.get().then((users) => {
 			this.users = users;
 		});
 	};
 
-	showUserDetails = (user) => {
-		this.user =  user;
+	// show user details
+	updateUserDetail = (user) => {
+		this.user =  this.user ? null : user;
 	};
 
-	hideUserDetails = () => {
-		this.user = null;
-	}
 }

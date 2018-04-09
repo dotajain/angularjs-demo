@@ -66,7 +66,8 @@ const config = {
 		}),
 		new CleanWebpackPlugin('build'),
 		new HtmlWebpackPlugin({
-			template: './src/index.html'
+			template: './src/index.html',
+			favicon: 'favicon.ico'
 		}),
 		new ExtractTextWebpackPlugin('styles/styles.css'),
 		new OptimizeCssAssetsWebpackPlugin()

@@ -1,10 +1,10 @@
 <div class="container">
 	<h1>List of Users</h1>
-	<h3>Click user to show more details</h3>
+	<h3>Click user name to show more details</h3>
 	<!-- {{$ctrl.users}} -->
 	<div class="card-deck">
 		<div class="card" ng-repeat="user in $ctrl.users | orderBy:'name'">
-			<button class="card-box"  ng-click="$ctrl.showUserDetails(user)" >
+			<button class="card-box"  ng-click="$ctrl.updateUserDetail(user)" >
 				<div class="card-header">
 					<h2>{{user.name}}</h2>
 				</div>
@@ -20,27 +20,5 @@
 			</button>
 		</div>
 	</div>
-	<div class="modal" ng-if="$ctrl.user">
-		<div class="modal-body">
-			<button class="modal-close" ng-click="$ctrl.hideUserDetails()">x</button> 
-			<h4>Personal Information:</h4>
-			<p><strong>Name:</strong> {{$ctrl.user.name}}</p>
-			<p><strong>UserName:</strong> {{$ctrl.user.username}}</p>
-			<p><strong>Email:</strong>  {{$ctrl.user.email}}</p>
-			<p><strong>Phone:</strong>  {{$ctrl.user.phone}}</p>
-			
-			<h4>Company Information:</h4>
-			<p><strong>Company Name:</strong> {{$ctrl.user.company.name}}</p>
-			<p><strong>Company Description:</strong> {{$ctrl.user.company.bs}}</p>
-			
-			<h4>Address:</h4>
-			<address> 
-			<p>
-				{{$ctrl.user.address.suite}}, {{$ctrl.user.address.street}}<br/>
-				{{$ctrl.user.address.city}} - {{$ctrl.user.address.zipcode}}
-			</p>
-			</address>   
-		</div>
-	</div>
+	<user-details ng-if="$ctrl.user" user="$ctrl.user" on-update="$ctrl.updateUserDetail()"></user-details>
 </div>
-
